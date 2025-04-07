@@ -27,7 +27,7 @@ function CreateJobForm() {
       company: "",
       location: "",
       status: JobStatus.Pending,
-      email: "",
+      // email: "",
       mode: JobMode.FullTime,
     },
   });
@@ -80,12 +80,12 @@ function CreateJobForm() {
           />
          
 
-          {form.watch("status") == "pending" ||
+          {/* {form.watch("status") == "pending" ||
           form.watch("status") == "interview" ? (
             <CustomFormField name="email" control={form.control} />
           ) : (
             ""
-          )}
+          )} */}
           {/* job  type */}
           <CustomFormSelect
             name="mode"

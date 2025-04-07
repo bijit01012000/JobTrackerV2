@@ -9,7 +9,6 @@ export type JobType = {
   company: string;
   location: string;
   status: string;
-  email?: string;
   mode: string;
 };
 
@@ -36,12 +35,12 @@ export const createAndEditJobSchema = z.object({
     message: "location must be at least 2 characters.",
   }),
   status: z.nativeEnum(JobStatus),
-  email: z
-    .string()
-    .email({
-      message: "Please enter a valid email address.",
-    })
-    .optional(),
+  // email: z
+  //   .string()
+  //   .email({
+  //     message: "Please enter a valid email address.",
+  //   })
+  //   .optional(),
   mode: z.nativeEnum(JobMode),
 });
 
