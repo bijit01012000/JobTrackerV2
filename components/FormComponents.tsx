@@ -38,6 +38,23 @@ export function CustomFormField({ name, control }: CustomFormFieldProps) {
   );
 }
 
+export function CustomDateTimeField({ name, control }: CustomFormFieldProps) {
+  return (
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel className="capitalize">{name}</FormLabel>
+          <FormControl>
+            <Input type="datetime-local" {...field} />
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+}
 type CustomFormSelectProps = {
   name: string;
   control: Control<any>;
@@ -82,3 +99,6 @@ export function CustomFormSelect({
   );
 }
 export default CustomFormSelect;
+
+
+

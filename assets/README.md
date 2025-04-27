@@ -96,7 +96,7 @@ layout.tsx
 
 ```tsx
 export const metadata: Metadata = {
-  title: 'Jobify Dev',
+  title: 'JobTrackerV2',
   description: 'Job application tracking system for job hunters',
 };
 ```
